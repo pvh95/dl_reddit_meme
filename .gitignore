@@ -1,2 +1,6 @@
 # Mac system file; the leading # marks a comment
 .DS_Store
+
+#Ignoring output/ and temp/ folders 
+output/* 
+temp/*
