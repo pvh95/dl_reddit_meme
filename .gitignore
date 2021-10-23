@@ -1,6 +1,7 @@
 # Mac system file; the leading # marks a comment
 .DS_Store
 
-#Ignoring output/ and temp/ folders 
+#Ignoring folders 
 output/* 
 temp/*
+.ipynb_checkpoints/*
