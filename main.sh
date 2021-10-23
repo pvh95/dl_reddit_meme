@@ -9,6 +9,7 @@ virtualenv temp/env -p python
 pip install -r requirements.txt
 
 python nyt_headline.py > ./temp/logFile_headline.txt
+python meme_scrape.py
 
 deactivate
 
