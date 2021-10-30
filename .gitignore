@@ -1,6 +1,9 @@
 # Mac system file; the leading # marks a comment
 .DS_Store
 
+#Ignore files
+./meme_scrape.ipynb
+
 #Ignoring folders 
 output/headlines/*
 output/meme_pics/*
