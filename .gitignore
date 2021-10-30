@@ -3,6 +3,6 @@
 
 #Ignoring folders 
 output/* 
-!*.csv
+output/!*.csv
 temp/*
 .ipynb_checkpoints/*
