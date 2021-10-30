@@ -72,16 +72,12 @@ def moving_files(dataset, src_folder, dst_folder):
         except OSError as e:
             continue
 
-    #dirListing = os.listdir(dst_folder)
-    #print(len(dirListing), 'num of items in the folder \n')
-    #print('---------------------------')
+    dirListing = os.listdir(dst_folder)
+    print(len(dirListing), 'num of items in the folder \n')
+    print('---------------------------')
 
 def main():
-    col_names=['id', 'title', 'body', 'score']
-    df = pd.read_csv('./output/memes.csv', sep=';', names=col_names, header=None, encoding='unicode_escape')
-    df = df.dropna(subset=['score']).reset_index(drop = True)
-    df['score'] = df['score'].astype('int32')
-    df['year'] =  df['id'].str[0:4]
+    df = pd.read_csv('./output/memes_prepared.csv')
     df['ym'] = df['id'].str[0:7]
 
     train_set, validTest_set =  drop_tail_elements_from_df(df, tail_size = 10000)
@@ -93,7 +89,7 @@ def main():
 
     for i in range(len(dataset_var)):
         moving_files(dataset_var[i], src_folder = './output/meme_pics/', dst_folder = './output/' + dataset_str[i] + '/')
-        dataset_var[i].drop(columns = ['year', 'fname', 'ym'], inplace = True)
+        dataset_var[i].drop(columns = ['fname', 'ym'], inplace = True)
         dataset_var[i].to_csv('./output/' + dataset_str[i] + '.csv', index = False)
 
 
