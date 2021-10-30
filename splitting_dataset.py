@@ -4,7 +4,6 @@ from sklearn.model_selection import StratifiedShuffleSplit
 import glob
 import os
 import shutil
-from copy import deepcopy as dcp
 
 #---------Function Definition ------------#
 def drop_tail_elements_from_df(df, tail_size):
@@ -60,7 +59,7 @@ def moving_files(dataset, src_folder, dst_folder):
     """
 
     if not os.path.exists(dst_folder):
-        os.mkdir(dst_folder)
+        os.makedirs(dst_folder)
 
     dataset['fname'] = dataset['id'].astype(str) + '.png'
     print(len(dataset), 'num of file according to the dataset')
@@ -86,10 +85,15 @@ def main():
 
     dataset_var = [test_set, valid_set, train_set]
     dataset_str = ['test_set', 'valid_set', 'train_set']
+    label = [0,1]
 
     for i in range(len(dataset_var)):
-        moving_files(dataset_var[i], src_folder = './output/meme_pics/', dst_folder = './output/' + dataset_str[i] + '/')
-        dataset_var[i].drop(columns = ['fname', 'ym'], inplace = True)
+        for lab in label:
+            tmp_df = dataset_var[i][ dataset_var[i]['is_dank'] == lab ]
+            print(tmp_df, 'from ' + dataset_str[i] + '\n')
+            dest_folder = './output/' + dataset_str[i] + '/' + str(lab) + '/'
+            moving_files(tmp_df, src_folder = './output/meme_pics/', dst_folder = dest_folder)
+        dataset_var[i].drop(columns = ['ym'], inplace = True)
         dataset_var[i].to_csv('./output/' + dataset_str[i] + '.csv', index = False)
 
 
