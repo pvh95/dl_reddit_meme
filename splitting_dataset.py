@@ -76,10 +76,12 @@ def moving_files(dataset, src_folder, dst_folder):
     print('---------------------------')
 
 def main():
-    df = pd.read_csv('./output/memes_prepared.csv')
-    df['ym'] = df['id'].str[0:7]
+    df = pd.read_csv('./output/memes_prepared.csv')  # Already labelled dataset
+    df['ym'] = df['id'].str[0:7] # Establing ym, whose structure is yyyy.mm (e.x.: 2021.07)
 
-    train_set, validTest_set =  drop_tail_elements_from_df(df, tail_size = 10000)
+    train_set, validTest_set =  drop_tail_elements_from_df(df, tail_size = 10000) # Just cut down the last 10.000 memes (in terms of time order) and give it to the validTest_set and rest is the training set
+
+    # Stratified sampling on the last 10.000 memes according to the newly established 'ym' column aka according to year.month. between valid_set and test_set.
     valid_set, test_set = data_SSSplitting(validTest_set, split_size = 0.5, strata_col='ym')
 
 
@@ -87,14 +89,17 @@ def main():
     dataset_str = ['test_set', 'valid_set', 'train_set']
     label = [0,1]
 
+    #### Moving memes according to their respective labelled train/test/valid folders a.k.a inside each of those 3 sets, there are folders 0 and 1 referring to not_dank or dank
     for i in range(len(dataset_var)):
         for lab in label:
             tmp_df = dataset_var[i][ dataset_var[i]['is_dank'] == lab ]
             print(tmp_df, 'from ' + dataset_str[i] + '\n')
+
             dest_folder = './output/' + dataset_str[i] + '/' + str(lab) + '/'
             moving_files(tmp_df, src_folder = './output/meme_pics/', dst_folder = dest_folder)
+
         dataset_var[i].drop(columns = ['ym'], inplace = True)
-        dataset_var[i].to_csv('./output/' + dataset_str[i] + '.csv', index = False)
+        dataset_var[i].to_csv('./output/' + dataset_str[i] + '.csv', index = False)  # Generating the train_set/valid_set/test_set csv-s
 
 
 #----------End of Function Definition-------------#
