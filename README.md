@@ -72,5 +72,3 @@ It will install all the dependencies, create the virtual environment and run the
 
 ## Credits
 Roland Molontay, Péter Juhász
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pvh95/dl_reddit_meme/blob/main/memes_exploratory.ipynb)
