@@ -2,7 +2,10 @@
 .DS_Store
 
 #Ignoring folders 
-output/* 
-output/!*.csv
+output/headlines/*
+output/meme_pics/*
+output/train_set/*
+output/valid_set/*
+output/test_set/*
 temp/*
 .ipynb_checkpoints/*
