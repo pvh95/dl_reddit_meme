@@ -24,7 +24,7 @@ Prerequisities:
 * 50GB of storage 
 * optinal: Cloud or a PC with noticeable GPU power :) 
 * **pip** package manager
-* optional: **virtualenv** (for seperating this project depencdencies from others and also great for reproducibility), **CL** (unix/linux CL is the preferable one) 
+* optional: **virtualenv** (for seperating this project dependencies from others and also great for reproducibility), **CL** (unix/linux CL is the preferable one) 
 
 Necessary dependencies/packages (so far): 
 * https://github.com/pvh95/dl_reddit_meme/blob/main/requirements.txt
