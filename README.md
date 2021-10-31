@@ -49,11 +49,11 @@ Structure of this projects:
 * **'./'** the root directory. Most of the scripts will be here. 
 * Inside the root directory, there are two main subdirectories. First, **./temp** which is supposed to use for anything temporary (e.x. logging files there for example). The other one is the **./output** folder where the results of scripts will be dumped here.
 
-If you are coming from a Unix/Linux based computer you just need to type the following into the CL:
+If you are coming from a Unix/Linux based computer, you just need to type the following one-liner into the CL:
 ```
 sh main.sh
 ```
-It will install all the dependencies, create the virtual environment and run the scripts/programs that will be discussed in details in the next paragraph
+It will install all the dependencies, create the virtual environment and run the scripts/programs that will be discussed in details in the next section.
 
 
 ## Code components of this project
