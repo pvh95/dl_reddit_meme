@@ -69,6 +69,7 @@ It will install all the dependencies, create the virtual environment and run the
   - It includes the last 10 years of scraped headlines with addtional information such *date*, *section*, *keywords*
 
 **meme_scrape.py** (Reddit Meme scraper)
+  - A guide to create a Reddit API key: https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c
   - Scraping Reddit memes from 2011.10.02 until (but not including) 2021.10.17 and those pictures will be saved to **./output/meme_pics** folder
   - Any text information (file_names, title, score) will be saved into the **./output/memes.csv**.
 
