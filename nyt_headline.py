@@ -8,31 +8,13 @@ import datetime
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
-### Determining the time interval using for downloading headlines from NYT 
-
-start = datetime.date(2011, 10, 1)
-end = datetime.date.today()
-
-print('Start date: ' + str(start))
-print('End date: ' + str(end))
-
-
-
-''' A list of months that falls beetween start = 2011-10-01 and end = today. 
-Necesseary for Archive API as it functions on one month only '''
-
-months = [x.split(' ') for x in pd.date_range(start, end, freq='MS').strftime("%Y %-m").tolist()]
-
-
-
 def send_request(date):
     '''Sending a request to the NYT Archive API for given date. 
     Two rate limits: 4,000 requests per day and 10 requests per minute. 
     You should sleep 6 seconds between calls to avoid hitting the per minute rate limit'''
     
     base_url = 'https://api.nytimes.com/svc/archive/v1/'
-    url = base_url + '/' + date[0] + '/' + date[1] + '.json?api-key=' + 'YOUR_KEY'
+    url = base_url + '/' + date[0] + '/' + date[1] + '.json?api-key=' + 'YOUR-KEY'
     
     try:
         response = requests.get(url, verify=False).json()
@@ -112,5 +94,21 @@ def get_data(dates):
     print('Number of articles collected: ' + str(total))
 
 
-get_data(months)
+if __name__ == "__main__":
+    ### Determining the time interval using for downloading headlines from NYT 
+
+    start = datetime.date(2011, 10, 1)
+    end = datetime.date.today()
+
+    print('Start date: ' + str(start))
+    print('End date: ' + str(end))
+
+
+
+    ''' A list of months that falls beetween start = 2011-10-01 and end = today. 
+    Necesseary for Archive API as it functions on one month only '''
+
+    months = [x.split(' ') for x in pd.date_range(start, end, freq='MS').strftime("%Y %-m").tolist()]
+
+    get_data(months)
 
