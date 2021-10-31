@@ -32,7 +32,7 @@ def send_request(date):
     You should sleep 6 seconds between calls to avoid hitting the per minute rate limit'''
     
     base_url = 'https://api.nytimes.com/svc/archive/v1/'
-    url = base_url + '/' + date[0] + '/' + date[1] + '.json?api-key=' + 'Q5vRAFlysZv1cTXbyyboMl0AxvXL0lXA'
+    url = base_url + '/' + date[0] + '/' + date[1] + '.json?api-key=' + 'YOUR_KEY'
     
     try:
         response = requests.get(url, verify=False).json()
