@@ -2,7 +2,7 @@
 
 
 ## Description 
-The purpose of this project is to build Machine Learning / Deep Learning model(s) to be able to predict as accurately as possible whether a meme dank or not. The plan is to use cutting-edge ML/DL methods such as NLP for sentiment analysis and keyword extractions, and Convolutional Neural Networks (CNN) and Visual Transformers (ViT) for capture hidden patterns in meme pictures to achieve our above mentioned goals. 
+The purpose of this project is to build Machine Learning / Deep Learning model(s) to be able to predict as accurately as possible whether a meme dank or not. The plan is to use cutting-edge ML/DL methods such as NLP for sentiment analysis and keyword extractions, and Convolutional Neural Networks (CNN) and Visual Transformers (ViT) for capture hidden patterns in meme pictures to achieve our above mentioned goal. 
 
 
 ## Data sources 
