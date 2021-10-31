@@ -1,4 +1,4 @@
-# Mac system file; the leading # marks a comment
+# Ignoring Mac system file
 .DS_Store
 
 #Ignore files
