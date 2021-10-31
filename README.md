@@ -85,7 +85,7 @@ It will install all the dependencies, create the virtual environment and run the
 
 **splitting_dataset.py** (Train-Valid-Test splitter)
    - Input: **./output/memes_prepared.csv**
-   - Output: **./output/train_set.csv**, **./output/valid_set.csv**, **./output/test_set.csv**. Generating csv-s for the respecting dataset. 
+   - Output: **./output/train_set.csv**, **./output/valid_set.csv**, **./output/test_set.csv**. Generating csv-s for the respecting datasets. 
    - Putting memes into their labelled train_set/valid_set/test_set subfolders inside the **./output** folders. For exaple a meme in the valid set and will a label 1, it will be put into **./output/valid_set/1/**.
 
 ## Credits
