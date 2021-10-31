@@ -37,6 +37,10 @@ pip install <packagename>
 pip install -r requirements.txt
 ```
 
+## Data sources 
+* Reddiit **memes** subreddit: https://www.reddit.com/r/memes/
+* NYT Archives: https://www.nytimes.com/search/?srchst=nyt
+
 ## How to use the projects
 Setting up the dev 
 * Either fork the project or
