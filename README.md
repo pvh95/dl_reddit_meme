@@ -11,10 +11,11 @@ At this point we managed to:
 *  Do the train-valid-test split. With the help of our labelled data, we distributed those memes into the appropriate labelled train-valid-test folders a.k.a each of these three folders includes a '0' and '1' labelled folders. 
 
 Plan for the rest of the course: 
-* Deploy a better meme scraper
-* Do further data analysis and visualization. 
+* Deploying a better meme scraper
+* Doing further data analysis and visualization. 
 * Using **shap** values to determine how features might influence the prediction.
-* Do some feature extraction, data cleaning, data preprocessing 
+* Harnessing the power of NLP for keyword extraction and sentiment analysis of memes (for the latter van OCR could be deployed to get the text from the memes)
+* Doing some feature extraction, data cleaning, data preprocessing 
 * Implementing CNN and ViT models through Keras and PyTorch 
 
 ## How to install the project: 
