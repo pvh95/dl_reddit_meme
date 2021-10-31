@@ -46,12 +46,12 @@ Setting up the dev
 * Either fork the project or
 * Clone the repository 
 ```
-git clone https://github.com/pvh95/dl_reddit_meme.git
+git clone https://github.com/pvh95/dl_reddit_meme.git <target_folder_on_your_computer>
 ```
 
 Structure of this projects: 
 * **'./'** the root directory. Most of the scripts will be here. 
-* Inside the root directory, there are two main subdirectories. First, **./temp** which is supposed to use for anything temporary (e.x. logging files there for example). The other one is the **./output** folder where the results of scripts will be dumped.
+* Inside the root directory, there are two main subdirectories. First, **./temp** which is supposed to be used for anything temporary (e.x. logging files there for example or activating the virtualenv). The other one is the **./output** folder where the results of scripts will be dumped.
 
 If you are coming from a Unix/Linux based computer, you just need to type the following one-liner into the CL:
 ```
