@@ -18,7 +18,7 @@ Prerequisities:
 * Python (3.7 or later)
 * Jupyter Notebook/ JupyterLab for interactive ipynb session 
 * 50GB of storage 
-* optinal: Cloud or a PC with noticeable GPU power :) 
+* optional: Cloud or a PC with noticeable GPU power :) 
 * **pip** package manager
 * optional: **virtualenv** (for seperating this project dependencies from others and also great for reproducibility), **CL** (unix/linux CL is the preferable one) 
 
