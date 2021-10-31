@@ -89,7 +89,7 @@ It will install all the dependencies, create the virtual environment and run the
    - Putting memes into their labelled train_set/valid_set/test_set subfolders inside the **./output** folders. For exaple a meme is in the valid set and has a label 1, it will be put into **./output/valid_set/1/**.
 
 ## Credits
-We would like to pronounce my greatest thanks and gratitude to: 
+We would like to pronounce our greatest thanks and gratitude to: 
 - Roland Molontay (https://hsdslab.math.bme.hu/), 
 - Péter Juhász (https://github.com/shepherd92)
 
