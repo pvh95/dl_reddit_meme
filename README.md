@@ -94,7 +94,7 @@ It will install all the dependencies, create the virtual environment and run the
 - Viet Hung Pham 
 
 ## Credits
-We would like to pronounce our greatest thanks and gratitude to: 
+We would like to pronounce our greatest thanks and gratitude to
 - Roland Molontay (https://hsdslab.math.bme.hu/), 
 - Péter Juhász (https://github.com/shepherd92)
 
