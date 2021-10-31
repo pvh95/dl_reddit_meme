@@ -93,4 +93,4 @@ We would like to pronounce our greatest thanks and gratitude to:
 - Roland Molontay (https://hsdslab.math.bme.hu/), 
 - Péter Juhász (https://github.com/shepherd92)
 
-for their guidance and continuous help throughout the prjoect process.
+for their guidance and continuous help throughout the project process.
