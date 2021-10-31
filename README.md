@@ -70,6 +70,7 @@ These script are placed in the **./** root folders.
 **meme_scrape.py** (Reddit Meme scraper)
   - A guide to create a Reddit API key: https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c
   - Scraping Reddit memes from 2011.10.02 until (but not including) 2021.10.17 and those pictures will be saved to **./output/meme_pics** folder
+  - *At the moment there are some missing period such 2018.05.21 - 2018.10.17 and from 2020.12.05 onwards. The reason that we scraped on our computers and beacause of the lack of time we needed to suspen all of our scraping activities. We are going to fix this issue.*
   - Any text information (file_names, title, score) will be saved into the **./output/memes.csv**.
 
 **memes_exploratory.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pvh95/dl_reddit_meme/blob/main/memes_exploratory.ipynb)  (Exploratory Data Analysis and Visualization and labelling)  
