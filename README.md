@@ -34,7 +34,7 @@ $ pip install <package_name>==<package_version>
 $ pip install -r requirements.txt
 ```
 
-### Use the projects
+### Use the project
 Setting up the dev 
 * Either fork the project or
 * Clone the repository 
@@ -42,7 +42,7 @@ Setting up the dev
 $ git clone https://github.com/pvh95/dl_reddit_meme.git <target_folder_on_your_computer>
 ```
 
-### Structure the projects: 
+### Structure the project: 
 * **'./'** the root directory. Most of the scripts will be here. 
 * Inside the root directory, there are two main subdirectories. First, **./temp** which is supposed to be used for anything temporary (e.x. logging files there for example or activating the virtualenv). The other one is the **./output** folder where the results of scripts will be dumped.
 
