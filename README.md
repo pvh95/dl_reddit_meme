@@ -87,4 +87,5 @@ It will install all the dependencies, create the virtual environment and run the
 We would like to pronounce my greatest thanks and gratitude to: 
 - Roland Molontay (https://hsdslab.math.bme.hu/), 
 - Péter Juhász (https://github.com/shepherd92)
+
 for their guidance and continuous help throughout the prjoect process.
