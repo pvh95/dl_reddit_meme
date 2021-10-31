@@ -14,7 +14,7 @@ Plan for the rest of the course:
 * Deploying a better meme scraper
 * Doing further data analysis and visualization. 
 * Using **shap** values to determine how features might influence the prediction.
-* Harnessing the power of NLP for keyword extraction and sentiment analysis of memes (for the latter van OCR could be deployed to get the text from the memes)
+* Harnessing the power of NLP for keyword extraction and sentiment analysis of memes (for the latter one, OCR could be deployed to get the texts from memes)
 * Doing some feature extraction, data cleaning, data preprocessing 
 * Implementing CNN and ViT models through Keras and PyTorch 
 
