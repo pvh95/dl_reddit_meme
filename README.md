@@ -72,22 +72,23 @@ These script are placed in the **./** root folders.
   - Scraping and downloading Reddit memes from 2019.01.01 until (but not including) 2021.10.17 and those pictures will be saved to **./output/meme_pics** folder
   - Any scraped text information (file_names, title, score) will be saved into the **./output/memes1921.csv**.
 
-**scrape_meme1118.py 
+**scrape_meme1118.py**
    - It just scraped the necessary information and urls into a csv for another py script to download those memes via the url. 
    - Scraped period: 2011.01.01 - 2018.12.31
    - Saved to **./output/memes1118.csv**
 
-**downl_meme1118.py 
+**downl_meme1118.py**
    - Input: **./output/memes1118.csv**
    - It used the url information from **./output/memes1118.csv** to download memes to **./output/meme_pics/**
    - The # of downloaded images are much less than what this csv contains due to lot of already deleted memes from reddit. 
-   - 
-**memed_deletion.py 
+   
+**meme_deletion.py**
    - Input: **./output/memes1118.csv** and **./output/memes1921.csv**
    - Concatenating  ./output/memes1921.csv and ./output/memes1118.csv into one dataframe then filter this dataframe by 
       - First using pics in ./faulty_pics folder to clean up ./output/meme_pics/
       - Then using the cleaned ./output/meme_pics/ folder to filter the concatenated dataframe
-   -Output: **./output/memes.csv**
+    
+   - Output: **./output/memes.csv**
 
 **memes_exploratory.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pvh95/dl_reddit_meme/blob/main/memes_exploratory.ipynb)  (Exploratory Data Analysis and Visualization and labelling)  
   - Input: ***./output/memes.csv***
