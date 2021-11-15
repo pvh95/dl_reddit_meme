@@ -61,19 +61,13 @@ def moving_files(dataset, src_folder, dst_folder):
     if not os.path.exists(dst_folder):
         os.makedirs(dst_folder)
 
-    dataset['fname'] = dataset['id'].astype(str) + '.png'
-    print(len(dataset), 'num of file according to the dataset')
-
     for file in dataset['fname']:
         file_name = os.path.basename(file)
         try:
-            shutil.copy(src_folder + file, dst_folder + file_name)
+            shutil.move(src_folder + file, dst_folder + file_name)
         except OSError as e:
             continue
 
-    dirListing = os.listdir(dst_folder)
-    print(len(dirListing), 'num of items in the folder \n')
-    print('---------------------------')
 
 def main():
     df = pd.read_csv('./output/memes_prepared.csv')  # Already labelled dataset
@@ -93,7 +87,6 @@ def main():
     for i in range(len(dataset_var)):
         for lab in label:
             tmp_df = dataset_var[i][ dataset_var[i]['is_dank'] == lab ]
-            print(tmp_df, 'from ' + dataset_str[i] + '\n')
 
             dest_folder = './output/' + dataset_str[i] + '/' + str(lab) + '/'
             moving_files(tmp_df, src_folder = './output/meme_pics/', dst_folder = dest_folder)
