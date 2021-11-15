@@ -110,7 +110,8 @@ In the ***./output/train_set.csv, ./output/valid_set.csv, ./output/test_set.csv*
 
 ## Results (so far)
 At this point we managed to:
-*  Scrape the last 10 years' of memes (from memes subreddit) with the daily cap of 200-250 memes. (even though it is still not perfect, but try our best to adjust it as much as we could)
+*  Scrape the last 10 years' of memes (from memes subreddit) with the daily cap of 200memes . (even though it is still not perfect, but try our best to adjust it as much as we could)
+*  Deploy a better meme scraper for the earlier periods of the examined time interval.
 *  Also scrape the last 10 years' New York Times headlines. This aspects enters into the picture when we try to harness the potential power of an actuality of a subject/topic. 
 *  Do some initial explanatory data analysis and data visualization. 
 *  Label our data whether it is dank or not. 
