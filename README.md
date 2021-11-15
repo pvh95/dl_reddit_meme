@@ -17,7 +17,7 @@ The purpose of this project is to build Machine Learning / Deep Learning model(s
 Prerequisities: 
 * Python (3.7 or later)
 * Jupyter Notebook/ JupyterLab for interactive ipynb session 
-* 50GB of storage 
+* 61GB or more storage 
 * optional: Cloud or a PC with noticeable GPU power :) 
 * **pip** package manager
 * optional: **virtualenv** (for seperating this project dependencies from others and also great for reproducibility), **CL** (unix/linux CL is the preferable one) 
@@ -67,11 +67,27 @@ These script are placed in the **./** root folders.
   - Output: the encompassing **./output/unified_headline.csv**
   - It includes the last 10 years of scraped headlines with addtional information such *date*, *section*, *keywords*
 
-**meme_scrape.py** (Reddit Meme scraper)
+**meme_scrape.py** 
   - A guide to create a Reddit API key: https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c
-  - Scraping Reddit memes from 2011.10.02 until (but not including) 2021.10.17 and those pictures will be saved to **./output/meme_pics** folder
-  - *At the moment there are some missing period such 2018.05.21 - 2018.10.17 and from 2020.12.05 onwards. The reason that we scraped on our computers and beacause of the lack of time we needed to suspen all of our scraping activities. We are going to fix this issue.*
-  - Any text information (file_names, title, score) will be saved into the **./output/memes.csv**.
+  - Scraping and downloading Reddit memes from 2019.01.01 until (but not including) 2021.10.17 and those pictures will be saved to **./output/meme_pics** folder
+  - Any scraped text information (file_names, title, score) will be saved into the **./output/memes1921.csv**.
+
+**scrape_meme1118.py 
+   - It just scraped the necessary information and urls into a csv for another py script to download those memes via the url. 
+   - Scraped period: 2011.01.01 - 2018.12.31
+   - Saved to **./output/memes1118.csv**
+
+**downl_meme1118.py 
+   - Input: **./output/memes1118.csv**
+   - It used the url information from **./output/memes1118.csv** to download memes to **./output/meme_pics/**
+   - The # of downloaded images are much less than what this csv contains due to lot of already deleted memes from reddit. 
+   - 
+**memed_deletion.py 
+   - Input: **./output/memes1118.csv** and **./output/memes1921.csv**
+   - Concatenating  ./output/memes1921.csv and ./output/memes1118.csv into one dataframe then filter this dataframe by 
+      - First using pics in ./faulty_pics folder to clean up ./output/meme_pics/
+      - Then using the cleaned ./output/meme_pics/ folder to filter the concatenated dataframe
+   -Output: **./output/memes.csv**
 
 **memes_exploratory.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pvh95/dl_reddit_meme/blob/main/memes_exploratory.ipynb)  (Exploratory Data Analysis and Visualization and labelling)  
   - Input: ***./output/memes.csv***
@@ -100,10 +116,11 @@ At this point we managed to:
 *  Do the train-valid-test split. With the help of our labelled data, we distributed those memes into the appropriate labelled train-valid-test folders a.k.a each of these three folders includes a '0' and '1' labelled folders. 
 
 Numerically: 
-* Memes are from 2011.10.02 until (but not including) 2021.10.17 (but no instances from 2013) a.k.a 10 years worth of memes with the max cap of 200-250 memes
-* test set: **4759** memes with label *0* and **241** memes with label *1* 
-* valid set: **4735** memes with label *0* and **265** memes with label *1*
-* train set: **155105** memes with label *0* and **8340** memes with label *1* 
+* Memes are from 2011.10.02 until (but not including) 2021.10.17 (but no instances from 2013) a.k.a 10 years worth of memes with the max cap of 200 daily memes (in the earlier periods it was difficult to even scrape memes for a specific day) 
+* test set: **4760** memes with label *0* and **240** memes with label *1* 
+* valid set: **4741** memes with label *0* and **259** memes with label *1*
+* train set: **235672** memes with label *0* and **12643** memes with label *1* 
+* Total number of memes are: **258315**
 
 Main data: 
 * labelled dataset representing csv-s are: 
@@ -120,13 +137,14 @@ Main data:
     - ./output/test_set/1
 
 
-## Plan 
-* Deploying a better meme scraper
-* Doing further data analysis and visualization. 
-* Using **shap** values to determine how features might influence the prediction.
+## Plan  
 * Harnessing the power of NLP for keyword extraction and sentiment analysis of memes (for the latter one, OCR could be deployed to get the texts from memes)
 * Doing some feature extraction, data cleaning, data preprocessing 
 * Implementing CNN and ViT models through Keras and PyTorch 
+   - There will be baseline CNN models which is just gonna use only the memes, and no other information 
+   - Multi-input Neural network model with one of the branch is CNN and the other branch is an MLP with already processed text data and other features. 
+   - ViT for only images
+   - Multi-input Neural network model with one of the branch will be ViT and the other will be a language module. 
 
 
 ## About the authors 
@@ -139,5 +157,6 @@ Main data:
 We would like to pronounce our greatest thanks and gratitude to
 - Roland Molontay (https://hsdslab.math.bme.hu/), 
 - Péter Juhász (https://github.com/shepherd92)
+- Beatrix Benkő (https://github.com/bbeatrix)
 
 for their guidance and continuous help throughout the project process.
