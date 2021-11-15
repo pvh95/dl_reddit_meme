@@ -7,7 +7,7 @@
 # Installing depencdencies via requirements.txt.
 # Running 4 python scripts:
 # 1.) First the NYT headline scrapers
-# 2.) Reddit meeme scrapers
+# 2.) Reddit meme scrapers
 # 3.) memes exploratory and label tagging ipynb
 # 4.) a dataset splitter, that is a script that moves the picture in to their appropriate data set folders and generates 3 csv-s
 
@@ -21,7 +21,10 @@ virtualenv temp/env -p python
 pip install -r requirements.txt
 
 python nyt_headline.py #> ./temp/logFile_headline.txt
+python scrape_meme1118.py
+python downl_meme1118.py
 python meme_scrape.py
+python meme_deletion.py
 jupyter nbconvert --to notebook --execute memes_exploratory.ipynb --output memes_exploratory.ipynb
 python splitting_dataset.py #>  ./temp/log.txt
 
