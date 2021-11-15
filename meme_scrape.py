@@ -60,7 +60,7 @@ def download_memes(start,end):
                     with open(path, 'wb') as handler:
                         handler.write(img_data)
                         
-                    with open('./output/memes.csv','a') as fd:
+                    with open('./output/memes1921.csv','a') as fd:
                         fd.write(f'"{datetime.strftime(start_date,"%Y.%m.%d")}_{t}";"{post.title.replace(";",",")}";"{post.selftext.replace(";",",")}";{str(post.score).strip()}\n')
                         #fd.write(f'"{datetime.strftime(start_date,"%Y.%m.%d")}_{t}";"{post.title.replace(";",",")}";{str(post.score).strip()}\n')
                     t+=1
@@ -74,7 +74,7 @@ def download_memes(start,end):
             break
 
 
-download_memes(datetime.strptime('2011.10.02.', '%Y.%m.%d.'), datetime.strptime('2021.10.17.', '%Y.%m.%d.'))
+download_memes(datetime.strptime('2019.01.01.', '%Y.%m.%d.'), datetime.strptime('2021.10.17.', '%Y.%m.%d.'))
 
 
 
