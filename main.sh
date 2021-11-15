@@ -5,11 +5,13 @@
 # We create a virtualenv in order to be able to work with different dependencies so it will not interfere with other projects' dependencies.
 # For being able to harness virtualenv, one needs to pip install it.
 # Installing depencdencies via requirements.txt.
-# Running 4 python scripts:
+# Running the following python scripts in this order:
 # 1.) First the NYT headline scrapers
-# 2.) Reddit meme scrapers
-# 3.) memes exploratory and label tagging ipynb
-# 4.) a dataset splitter, that is a script that moves the picture in to their appropriate data set folders and generates 3 csv-s
+# 2.)-3.) Reddit meme scraper for 2011-2018 and dowload those memes
+# 4.) Reddit meme scraper and downloader for 2019-2021
+# 5.) Cleaning up the downloaded memes from broken images and filtering the dataframes with scraped info according to the already cleaned ./output/meme_pics.
+# 6.) memes exploratory and label tagging ipynb
+# 7.) a dataset splitter, that is a script that moves the picture in to their appropriate data set folders and generates 3 csv-s
 
 rm -rf temp/*
 mkdir temp/
