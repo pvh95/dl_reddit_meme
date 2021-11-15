@@ -50,7 +50,7 @@ If you are coming from a Unix/Linux based computer, you just need to type the fo
 $ sh main.sh
 ```
 It will install all the dependencies, create the virtual environment and run the scripts/programs that will be discussed in details in the next section.
-
+For more information about how scripts are deployed, consult the **main.sh** script.
 
 ## Methods 
 
