@@ -101,6 +101,13 @@ These script are placed in the **./** root folders.
    - Output: ***./output/train_set.csv, ./output/valid_set.csv, ./output/test_set.csv***. Generating csv-s for the respecting datasets. 
    - Putting memes into their labelled **train_set/valid_set/test_set** subfolders inside the **./output** folders. For example a meme in the valid set and with a label 1, it will be put into **./output/valid_set/1/**.
 
+**color_channel_conv.py** (converting RGBA/CMYK to RGB): 
+   - Input: ***./output/train_set.csv, ./output/valid_set.csv, ./output/test_set.csv*** 
+   - Output: ***./output/train_set.csv, ./output/valid_set.csv, ./output/test_set.csv***
+   - Converting images with color channels RGBA/CMYK to RGB. (num of deviant pics were approximately 30.000) 
+   - Furthermore, removing all the images whose pixel sizes (= width * height) are bigger than the PIL's limit pixel size, 89478485. (only 4 pics with this property were found and removed, all of them from ./output/train_set/0.)
+
+
 ### Train-Valid-Test Split 
 The last 10.000 memes (in time order) are used for valid and test sets (which are approx. the last 3 months worth of memes). Accurately, these 10.000 memes are stratified sampled according to months with split ratio of 0.5. 
 
