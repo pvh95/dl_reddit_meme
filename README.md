@@ -20,6 +20,10 @@ Prerequisities:
 * 61GB or more storage 
 * optional: Cloud or a PC with noticeable GPU power :) 
 * **pip** package manager
+* optional: install this convenience package: (targeted for Ubuntu 20.04LTS or later. This is important because in the main.sh all of the python scripts are called with pip/python. Without this package you have to run it with pip3 and python3) 
+```
+$ sudo apt install python-is-python3 
+```
 * optional: **virtualenv** (for seperating this project dependencies from others and also great for reproducibility), **CL** (unix/linux CL is the preferable one) 
 
 ### Install the necessary dependencies/packages (so far): 
