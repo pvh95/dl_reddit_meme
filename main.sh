@@ -12,6 +12,7 @@
 # 5.) Cleaning up the downloaded memes from broken images and filtering the dataframes with scraped info according to the already cleaned ./output/meme_pics.
 # 6.) memes exploratory and label tagging ipynb
 # 7.) a dataset splitter, that is a script that moves the picture in to their appropriate data set folders and generates 3 csv-s
+# 8.) a color channel converter, where pics with RGBA/CMYK are converted to RGB. In addition, images with pixel sizes exceeding PIL's limits were removed.
 
 rm -rf temp/*
 mkdir temp/
@@ -29,6 +30,7 @@ python meme_scrape.py
 python meme_deletion.py
 jupyter nbconvert --to notebook --execute memes_exploratory.ipynb --output memes_exploratory.ipynb
 python splitting_dataset.py #>  ./temp/log.txt
+python color_channel_conv.py
 
 deactivate
 
