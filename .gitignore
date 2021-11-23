@@ -2,7 +2,8 @@
 .DS_Store
 
 #Ignore files
-./meme_scrape.ipynb
+output/kep_vizsgalat.ipynb
+color_channel_conv.ipynb
 
 #Ignoring folders 
 output/headlines/*
