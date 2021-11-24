@@ -108,8 +108,9 @@ These script are placed in the **./** root folders.
 **color_channel_conv.py** (converting RGBA/CMYK to RGB): 
    - Input: ***./output/train_set.csv, ./output/valid_set.csv, ./output/test_set.csv*** 
    - Output: ***./output/train_set.csv, ./output/valid_set.csv, ./output/test_set.csv***
-   - Converting images with color channels RGBA/CMYK to RGB. (num of deviant pics were approximately 30.000) 
+   - Converting images with color channels other than RGB (such as CMYK, RGBA, P, L, LA) to RGB. (num of deviant pics were approximately 30.000) 
    - Furthermore, removing all the images whose pixel sizes (= width * height) are bigger than the PIL's limit pixel size, 89478485. (only 4 pics with this property were found and removed, all of them from ./output/train_set/0.)
+   - Removing gif files as it cannot be converted to RGBA (for an obvious reason). 166 of them were removed. 
 
 
 ### Train-Valid-Test Split 
@@ -132,8 +133,8 @@ Numerically:
 * Memes are from 2011.10.02 until (but not including) 2021.10.17 (but no instances from 2013) a.k.a 10 years worth of memes with the max cap of 200 daily memes (in the earlier periods it was difficult to even scrape memes for a specific day) 
 * test set: **4760** memes with label *0* and **240** memes with label *1* 
 * valid set: **4741** memes with label *0* and **259** memes with label *1*
-* train set: **235668** memes with label *0* and **12643** memes with label *1* 
-* Total number of memes are: **258311**
+* train set: **235507** memes with label *0* and **12638** memes with label *1* 
+* Total number of memes are: **258145**
 
 Main data: 
 * labelled dataset representing csv-s are: 
