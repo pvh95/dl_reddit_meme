@@ -3,6 +3,7 @@
 
 #Ignore files
 output/kep_vizsgalat.ipynb
+output/kep_vizsgalat_old.ipynb
 color_channel_conv.ipynb
 
 #Ignoring folders 
