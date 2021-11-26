@@ -133,8 +133,8 @@ Numerically:
 * Memes are from 2011.10.02 until (but not including) 2021.10.17 (but no instances from 2013) a.k.a 10 years worth of memes with the max cap of 200 daily memes (in the earlier periods it was difficult to even scrape memes for a specific day) 
 * test set: **4760** memes with label *0* and **240** memes with label *1* 
 * valid set: **4741** memes with label *0* and **259** memes with label *1*
-* train set: **235506** memes with label *0* and **12638** memes with label *1* 
-* Total number of memes are: **258144**
+* train set: **235504** memes with label *0* and **12638** memes with label *1* 
+* Total number of memes are: **258142**
 
 Main data: 
 * labelled dataset representing csv-s are: 
