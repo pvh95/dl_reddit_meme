@@ -161,6 +161,37 @@ Main data:
    - Multi-input Neural network model with one of the branch will be ViT and the other will be a language module. 
 
 
+## 2nd Milestone
+* We purchased a Google Colab plan for better GPU.
+* We uploaded the zipped folders to a shared Google Drive folder and these were loaded into the Colab environment.
+* We made our base_model with RESNET. We removed the top layers and added appropriate layers for the classification task, also used pre-trained imagenet weigths.
+* Wrapped into model_resnet, it has extra sequential and dense layers at the input and output parts.
+   - Adam optimization was used, with binary_crossentropy and weighted accuracy metrics to account for class imbalance.
+   - Early reduction and learning rate reducer were used for optimization.
+   - Best model can be found in the same folder, we used checkpointer for that.
+* Over 10 epoch, we plotted the training, validation accuracy, as well as cross entropy loss.
+   - The training accuracy reaches around 0.61, validation accuracy 0.63.
+   - The training loss reached 0.65, the validation loss 0.61.
+* Evaluating on the test set, the loss ended at 0.58, the accuracy at 0.65.
+* We extracted the true label from tf_dataset to get the probabilistic prediction and converted it into labels.
+* We calculated the following metrics:
+   - Accuracy: 0.6540
+   - Precision: 0.0815
+   - Recall: 0.6042
+   - F1-score: 0.1436
+   - Precision-Recall Curve AUC: 0.0913
+   - ROC AUC: 0.6804
+* We started fine-tuning.
+   - We kept the first 400 layers frozen but trained the rest of them, using RMSPROP for 5 epochs.
+* The validation accuracy climbed to 0.9 after 5 epochs, the cross entropy loss dropped to 0.5.
+* Loss on the test was 0.46, accuracy 0.90.
+* At this point, PR AUC was at 0.088 and ROC AUC at 0.664.
+* We also used a model based on Xception for 15 epochs.
+   - Its loss on the test set was 0.45, its accuracy 0.81.
+   - The PR AUC equals 0.083, the ROC AUC at 0.622
+* Three "best models" were saved and exported to the folder, the resnet with and without fine tuning and the xcept model.
+
+
 ## About the authors 
 - Bálint Turi-Kováts
 - Pintér József
