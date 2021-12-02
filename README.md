@@ -188,7 +188,7 @@ Main data:
 * At this point, PR AUC was at 0.088 and ROC AUC at 0.664.
 * We also used a model based on Xception for 15 epochs.
    - Its loss on the test set was 0.45, its accuracy 0.81.
-   - The PR AUC equals 0.083, the ROC AUC at 0.622
+   - The PR AUC equals 0.083, the ROC AUC at 0.622.
 * Three "best models" were saved and exported to the folder, the resnet with and without fine tuning and the xcept model.
 
 
