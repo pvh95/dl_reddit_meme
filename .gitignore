@@ -14,3 +14,5 @@ output/valid_set/*
 output/test_set/*
 temp/*
 .ipynb_checkpoints/*
+CNN_Models/.ipynb_checkpoints/
+
