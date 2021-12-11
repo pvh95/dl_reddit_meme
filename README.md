@@ -111,6 +111,7 @@ These script are placed in the **./** root folders.
    - Converting images with color channels other than RGB (such as CMYK, RGBA, P, L, LA) to RGB. (num of deviant pics were approximately 30.000) 
    - Furthermore, removing all the images whose pixel sizes (= width * height) are bigger than the PIL's limit pixel size, 89478485. (only 4 pics with this property were found and removed, all of them from ./output/train_set/0.)
    - Removing gif files as it cannot be converted to RGBA (for an obvious reason). 166 of them were removed. 
+   - Removing hidden broken images detected by tf.io.decode_image (there were 3 or 4 of them).
 
 
 ### Train-Valid-Test Split 
