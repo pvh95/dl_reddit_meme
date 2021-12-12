@@ -183,7 +183,7 @@ Main data:
    - Precision-Recall Curve AUC: 0.0913
    - ROC AUC: 0.6804
 * We started fine-tuning.
-   - We kept the first 400 layers frozen but trained the rest of them, using RMSPROP for 5 epochs.
+   - We kept the first 400 layers frozen but trained the rest of them, using Adam for 5 epochs.
 * The validation accuracy climbed to 0.9 after 5 epochs, the cross entropy loss dropped to 0.5.
 * Loss on the test was 0.46, accuracy 0.90.
 * At this point, PR AUC was at 0.088 and ROC AUC at 0.664.
