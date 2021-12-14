@@ -56,6 +56,8 @@ $ sh main.sh
 It will install all the dependencies, create the virtual environment and run the scripts/programs that will be discussed in details in the next section.
 For more information about how scripts are deployed, consult the **main.sh** script.
 
+* Amendment: Because of the lack of GPU power on our computers, after the data pre-processing and cleaning part (done by **color_channel_conv.py** ultimately), training on data was done on Google Colab Pro. Train-Valid-Test sets were zipped and uploaded to Google Drive. 
+
 ## Methods 
 
 ### Scripts used in the project
@@ -166,6 +168,7 @@ Main data:
 * We purchased a Google Colab plan for better GPU.
 * We uploaded the zipped folders to a shared Google Drive folder and these were loaded into the Colab environment.
 * We made our base_model with RESNET. We removed the top layers and added appropriate layers for the classification task, also used pre-trained imagenet weigths.
+* Class weights: **0.5268** for label 0 and **9.8173** for label 1
 * Wrapped into model_resnet, it has extra sequential and dense layers at the input and output parts.
    - Adam optimization was used, with binary_crossentropy and weighted accuracy metrics to account for class imbalance.
    - Early reduction and learning rate reducer were used for optimization.
@@ -192,6 +195,29 @@ Main data:
    - The PR AUC equals 0.083, the ROC AUC at 0.622.
 * Three "best models" were saved and exported to the folder, the resnet with and without fine tuning and the xcept model.
 
+## Last phase 
+* Implemented ViT in both Keras and Pytorch frameworks. 
+* In the Keras verison, ViT B32 model was used with the following parameter: 
+    * Class weights: **0.5268** for label 0 and **9.8173** for label 1
+    * Rescaling but not using data augumentation 
+    * Training for max 15 epochs with similar optimization structure as in CNN models including earlystopping
+    * Test set results: 
+        * Accuracy: 0.6064
+        * Precision: 0.0740
+        * Recall: 0.6250
+        * F1-score: 0.1323
+        * PR-AUC: 0.0929
+
+* In the PyTorch version, Google Vit was used: 
+
+## Conclusion 
+The test result was not exceptional by any means, but comparing to a random model on PR-AUC, our CNN/ViT models managed to improve by 80-90%. Due to lack of time and GPU power (we would need more than one GPU), hyperparameter optimisation was not carried out in larger scale.
+In the near future, we would like to continue our project with the following purposes: 
+* Doing hyperparamter optimisation
+* Tinkering with class weights and possibly trying other class imbalance offsetting methods such as SMOTE
+* Implementing OCR and sentiment analysis on the whole dataset (there were some initial efforts but unfortunately it takes a lot of time to run it on the dataset)
+* Deploying actuality to our models through NYT headlines (already scraped from 2011 onwards) and image actuality (already done and stored in KnowYourMemes folder) 
+* The previous two points about sentiment analysis and actuality would be built to the models through multi-input Neural Network. 
 
 ## About the authors 
 - Bálint Turi-Kováts
