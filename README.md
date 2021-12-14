@@ -221,7 +221,7 @@ Main data:
         * PR-AUC: 0.1021
 
 ## Conclusion 
-The test result was not exceptional by any means, but comparing to a random model on PR-AUC, our CNN/ViT models managed to improve by 80-90%. Due to lack of time and GPU power (we would need more than one GPU), hyperparameter optimisation was not carried out in larger scale.
+The test result was not exceptional by any means, but comparing to a random model on PR-AUC, our CNN/ViT models managed to improve by approximately 80-100%. Due to lack of time and GPU power (we would need more than one GPU), hyperparameter optimisation was not carried out in larger scale.
 In the near future, we would like to continue our project with the following purposes: 
 * Doing hyperparamter optimisation
 * Tinkering with class weights and possibly trying other class imbalance offsetting methods such as SMOTE
