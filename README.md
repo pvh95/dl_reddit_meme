@@ -199,7 +199,7 @@ Main data:
 ## Last phase 
 * Implemented ViT in both Keras and Pytorch frameworks. 
 * In the Keras verison, ViT B32 model was used with the following parameters: 
-    * Class weights: **0.5268** for label 0 and **9.8173** for label 1
+    * Class weights: **0.5268** for label 0 and **9.8173** for label 1 (according to balanced class weighting formula)
     * Using pre-trained imagenet for weights
     * Rescaling but not using data augumentation 
     * Training for max 15 epochs with similar optimization structure as in CNN models including earlystopping
