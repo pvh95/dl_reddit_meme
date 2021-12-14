@@ -1,5 +1,6 @@
 # Dank or Not a.k.a predicting the popularity of Reddit memes
 
+Documentation: https://github.com/pvh95/dl_reddit_meme/blob/main/Documentation_GoalDiggers2021.pdf
 
 ## Description 
 The purpose of this project is to build Machine Learning / Deep Learning model(s) to be able to predict as accurately as possible whether a meme dank or not. The plan is to use cutting-edge ML/DL methods such as NLP for sentiment analysis and keyword extractions, and Convolutional Neural Networks (CNN) and Visual Transformers (ViT) for capture hidden patterns in meme pictures to achieve our above mentioned goal. 
@@ -221,7 +222,7 @@ Main data:
         * PR-AUC: 0.1021
 
 ## Conclusion 
-The test result was not exceptional by any means, but comparing to a random model on PR-AUC, our CNN/ViT models managed to improve by approximately 80-100%. Due to lack of time and GPU power (we would need more than one GPU), hyperparameter optimisation was not carried out in larger scale.
+The test result was not exceptional by any means, but comparing to a random model on PR-AUC, our CNN/ViT models managed to improve by approximately 60-100%. Due to lack of time and GPU power (we would need more than one GPU), hyperparameter optimisation was not carried out in larger scale.
 In the near future, we would like to continue our project with the following purposes: 
 * Doing hyperparamter optimisation
 * Tinkering with class weights and possibly trying other class imbalance offsetting methods such as SMOTE
