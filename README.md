@@ -221,10 +221,10 @@ In the near future, we would like to continue our project with the following pur
 
 For reading our documentation about this project, please consult: https://github.com/pvh95/dl_reddit_meme/blob/main/Documentation_GoalDiggers2021.pdf
 
-## About the authors 
-- Bálint Turi-Kováts
-- Pintér József
-- Viet Hung Pham 
+## About the Team GoalDiggers 
+- Bálint Turi-Kováts (ZE8JRP)
+- Pintér József (FCNUQB)
+- Viet Hung Pham (YSOUT0)
 
 
 ## Credits
