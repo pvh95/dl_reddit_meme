@@ -197,8 +197,9 @@ Main data:
 
 ## Last phase 
 * Implemented ViT in both Keras and Pytorch frameworks. 
-* In the Keras verison, ViT B32 model was used with the following parameter: 
+* In the Keras verison, ViT B32 model was used with the following parameters: 
     * Class weights: **0.5268** for label 0 and **9.8173** for label 1
+    * Using pre-trained imagenet for weights
     * Rescaling but not using data augumentation 
     * Training for max 15 epochs with similar optimization structure as in CNN models including earlystopping
     * Test set results: 
@@ -208,7 +209,16 @@ Main data:
         * F1-score: 0.1323
         * PR-AUC: 0.0929
 
-* In the PyTorch version, Google Vit was used: 
+* In the PyTorch version, Google Vit was used with the following parameters:
+    * Class weights: **0.5268** for label 0 and **9.8173** for label 1
+    * Using built-in preprocessing methods in Google Vit
+    * Training for 10 epochs with Adam optimisation
+    * Test set results: 
+        * Accuracy: 0.8803
+        * Precision: 0.1106
+        * Recall: 0.2208
+        * F1-score: 0.1474
+        * PR-AUC: 0.1021
 
 ## Conclusion 
 The test result was not exceptional by any means, but comparing to a random model on PR-AUC, our CNN/ViT models managed to improve by 80-90%. Due to lack of time and GPU power (we would need more than one GPU), hyperparameter optimisation was not carried out in larger scale.
