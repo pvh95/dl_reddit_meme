@@ -211,7 +211,7 @@ Main data:
         * PR-AUC: 0.0929
 
 * In the PyTorch version, Google Vit was used with the following parameters:
-    * Class weights: **0.5268** for label 0 and **9.8173** for label 1
+    * Class weights: **0.1** for label 0 and **1** for label 1
     * Using built-in preprocessing methods in Google Vit
     * Training for 10 epochs with Adam optimisation
     * Test set results: 
