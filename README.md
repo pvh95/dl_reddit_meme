@@ -217,7 +217,9 @@ In the near future, we would like to continue our project with the following pur
 * Tinkering with class weights and possibly trying other class imbalance offsetting methods such as SMOTE
 * Implementing OCR and sentiment analysis on the whole dataset (there were some initial efforts but unfortunately it takes a lot of time to run it on the dataset)
 * Deploying actuality to our models through NYT headlines (already scraped from 2011 onwards) and image actuality (already done and stored in KnowYourMemes folder) 
-* The previous two points about sentiment analysis and actuality would be built to the models through multi-input Neural Network. 
+* The previous two points about sentiment analysis and actuality would be built to the models through multi-input Neural Network.  
+
+For reading our documentation about this project, please consult: https://github.com/pvh95/dl_reddit_meme/blob/main/Documentation_GoalDiggers2021.pdf
 
 ## About the authors 
 - Bálint Turi-Kováts
