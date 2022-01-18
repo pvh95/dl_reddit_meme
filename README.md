@@ -1,6 +1,7 @@
 # Dank or Not a.k.a predicting the popularity of Reddit memes
 
 Documentation: https://github.com/pvh95/dl_reddit_meme/blob/main/Documentation_GoalDiggers2021.pdf
+
 Presenation slides: https://github.com/pvh95/dl_reddit_meme/blob/main/Presentation_GoalDiggers2021.pdf
 
 ## Description 
